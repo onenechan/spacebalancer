@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class BombtimeScript : MonoBehaviour {
 
 	public static float bombtime = 0;
+	GameObject oto;
+	AudioSource audiosource;
 
 	// Use this for initialization
 	void Start () {
@@ -16,13 +18,13 @@ public class BombtimeScript : MonoBehaviour {
 	void Update () {
 		print (bombtime);
 		bombtime += Time.deltaTime;
-		if (bombtime >= 10) {
+		if (bombtime >= 8) {
 			if (SceneManager.GetActiveScene ().name == "center") {
 				SceneManager.LoadScene ("clear");
 			}
 		}
 
-		if (bombtime >= 23) {
+		if (bombtime >= 10) {
 			if (SceneManager.GetActiveScene ().name == "right" || SceneManager.GetActiveScene ().name == "left") {
 				SceneManager.LoadScene ("gameover");
 			}

@@ -8,6 +8,7 @@ TagManager:
   - dangerous
   - people
   - left
+  - kabe
   layers:
   - Default
   - TransparentFX

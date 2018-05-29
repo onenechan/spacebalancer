@@ -1,21 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class GameOverScript : MonoBehaviour {
+public class gameoverScript : MonoBehaviour {
 
-	public Text gameoverText; 
-	float gameoverTime = 0;
-	bool flag = false;
+	private AudioSource gameoverSound;
 
-	void update(){
-		gameoverTime  += Time.deltaTime;
+	// Use this for initialization
+	void Start () {
+		gameoverSound = GetComponent<AudioSource> ();
+		gameoverSound.Play ();
 	}
-
-	void _gameover () {
-		if (gameoverTime >= 23 && !flag) {
-			gameoverText.text = "GAME OVER";
-		}
+	
+	// Update is called once per frame
+	void Update () {
+		
 	}
 }
